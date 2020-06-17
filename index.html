@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  </head>
+  <body>
+			<div class="col-lg-12">
+				<div class="col-lg-3">
+					<font class="small"><b>Daftar Dokumen</b></font>
+					<ul class="small">
+						<li><a href="index.html?get=2020-04-16-Dicoding-Belajar-Android-untuk-Pemula">Dicoding - Belajar Android untuk Pemula</a></li>
+						<li><a href="index.html?get=2020-04-16-Dicoding-Memulai-Pemrograman-dengan-Kotlin">Dicoding - Memulai Pemrograman dengan Kotlin</a></li>
+						<li><a href="index.html?get=2020-06-01-Dicoding-Belajar-Visualisasi-Data">Dicoding - Belajar Visualisasi Data</a></li>
+						<li><a href="index.html?get=2020-06-03-ICSI-Certified-Network-Security-Specialist">ICSI - Certified Network Security Specialist</a></li>
+					</ul>
+				</div>
+				<div class="col-lg-9">
+					<object data="" type="application/pdf" style="min-height:100vh;width:100%">
+						<param name="title" value="CNSS">
+					</object>
+				</div>
+			</div
+<script src="jquery-3.2.1.min.js"></script>
+<script type="text/javascript">
+// Loading Page
+
+$( document ).ready(function() {
+	function getUrlVars() {
+		var vars = {};
+		var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function(m,key,value) {
+			vars[key] = value;
+		});
+		return vars;
+	}
+	
+	var get = getUrlVars()["get"];
+	$('object').attr('data',get+'.pdf')
+});
+</script>
+  </body>
+</html>
